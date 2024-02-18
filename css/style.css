@@ -123,22 +123,7 @@ nav a:focus {
   /* visibility:hidden ;  */
   color: #000000
 }
-/* .skip {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  display: none;
-  z-index: 1000;
-} */
 
-/* .skip {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-} */
 /* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
 .skip:focus {
   top: 100px; 
@@ -148,10 +133,7 @@ nav a:focus {
   height: auto;
   color: #000000
 }
-/* .skip:focus {
-  top: 20px;
-  display: block;
-} */
+
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
 *:focus {
@@ -160,10 +142,21 @@ nav a:focus {
 
 
 /* Step 4: Write selector/rule property to style the container */
-
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-gap: 15px;
+}
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
+.container > :first-child {
+  grid-column: 1 / span 3;
+  background-image: url('header.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 
 
@@ -171,12 +164,62 @@ first div in the grid  and place it in the grid. */
  four rows in the grid. */
 
       /*This will be a lot of rules.... but be strategic and combine seletors*/
+.about {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.method {
+    grid-row: 3 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.clients {
+    grid-row: 4 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.contact {
+    grid-row: 5 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.about-image{
+  grid-row: 2 ;
+  grid-column: 1 / span 3;
+  max-height: 600px;
+  overflow: hidden;
+}
+.method-image {
+  grid-row: 3;
+  grid-column: 1 / span 3;
+  max-height: 600px;
+  overflow: hidden;
+}
+.clients-image {
+  grid-row: 4;
+  grid-column: 1 / span 3;
+  max-height: 600px;
+  overflow: hidden;
+}
+.contact-image {
+    grid-row: 5;
+    grid-column: 1 / span 3;
+    max-height: 600px;
+    overflow: hidden;
+}
 
 
  /* Step 8: Write the selector/rule property to style the .text-block class. */
-
-
+ .text-block {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Add your media query here */
+@media screen and (min-width: 800px){
+
 
 
   /* Step 9: Write the selector/rule property to style the nav element */
@@ -191,3 +234,4 @@ first div in the grid  and place it in the grid. */
 
  /* Step 13:Write the selector/rule property to update the .text-block class */
 
+}
