@@ -156,11 +156,12 @@ first div in the grid  and place it in the grid. */
 .container > :first-child {
   grid-column: 1 / -1;
   background-image: url('images/header.jpg');
-  background-repeat: no-repeat;
+  min-height: 100px;
   background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100px;
+  
 
 }
 
@@ -225,7 +226,8 @@ first div in the grid  and place it in the grid. */
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 /* Add your media query here */
 @media screen and (min-width: 800px){
@@ -244,6 +246,7 @@ first div in the grid  and place it in the grid. */
     align-items: center;
     text-align:center;
     background-color: #737373;
+    /* background-image: url('header.jpg'); */
   }
   
 
@@ -256,22 +259,22 @@ first div in the grid  and place it in the grid. */
 
   .method {
       /* grid-row: 3 / span 1; */
-      grid-column: 2 / span 2;
-      text-align: center;
+    grid-column: 2 / span 2;
+    text-align: center;
   }
 
   .clients {
       /* grid-row: 4 / span 1; */
-      grid-column: 3 / span 2;
+    grid-column: 3 / span 2;
       /* text-align: center; */
-      align-items: center;
+    align-items: center;
       /* display: flex; */
   }
 
   .contact {
       /* grid-row: 5 / span 1; */
-      grid-column: 2 / span 2;
-      text-align: center;
+    grid-column: 2 / span 2;
+    text-align: center;
   }
 
   .about-image{
@@ -294,9 +297,9 @@ first div in the grid  and place it in the grid. */
   }
   .contact-image {
       /* grid-row: 5; */
-      grid-column: 3 / span 2;
-      max-height: 600px;
-      overflow: hidden;
+    grid-column: 3 / span 2;
+    max-height: 600px;
+    overflow: hidden;
   }
 
 
@@ -305,7 +308,7 @@ first div in the grid  and place it in the grid. */
     max-height: 250px;
     overflow: visible;
     /* align-items: center; */
-    text-align:center;
+    /* text-align:center; */
   }
 
 }
