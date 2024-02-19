@@ -16,13 +16,13 @@ body{
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
-  color: white;
+  color: #ffffff;
   height: 400px;                /* Parallax effect */
 }
 
 
 .overview p{
-  color: white;
+  color: #ffffff;
   font-size: 24px;
   padding: 0 100px;
   text-align: center;
@@ -55,7 +55,7 @@ nav a{
 
 
 .skip a{
-  background: white;
+  background: #000000;
   left: 0;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
@@ -71,8 +71,8 @@ nav{
 }
 
 footer{
-  background-color: black;
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
   padding-top: 30px;
   text-align: center;
 }
@@ -84,7 +84,9 @@ footer{
   padding: 30px;
   
 }
-
+footer.text-block{
+  background-color: #000000;
+}
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
@@ -155,7 +157,7 @@ nav a:focus {
 first div in the grid  and place it in the grid. */
 .container > :first-child {
   grid-column: 1 / -1;
-  background-image: url('images/header.jpg');
+  background-image: url('https://dantemitchell.github.io/hw3_2024/images/header.jpg');
   min-height: 100px;
   background-attachment: fixed;
   background-position: center;
